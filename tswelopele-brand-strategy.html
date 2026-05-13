@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tswelopele Travel — Brand Strategy & Positioning · "Moving Forward"</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --earth: #2C1A0E;
+    --ochre: #C8702A;
+    --gold: #E8B84B;
+    --clay: #8B4A2B;
+    --sage: #4A6741;
+    --mist: #D4C9B8;
+    --cream: #F5F0E8;
+    --linen: #EDE4D3;
+    --ink: #1A1208;
+    --sky: #6B8FAB;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--earth);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ─── COVER ─────────────────────────────────── */
+  .cover {
+    min-height: 100vh;
+    background: var(--earth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(200,112,42,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 70%, rgba(232,184,75,0.10) 0%, transparent 60%);
+  }
+
+  .cover-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8702A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .cover-ornament {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-ornament::before, .cover-ornament::after {
+    content: '◆';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 0.5rem;
+  }
+  .cover-ornament::before { left: 0; }
+  .cover-ornament::after { right: 0; }
+
+  .agency-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .cover h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: var(--mist);
+    font-style: italic;
+    font-weight: 300;
+    margin: 1.5rem auto 3rem;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(212,201,184,0.5);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(200,112,42,0.15);
+  }
+  .c1 { width: 600px; height: 600px; top: -200px; right: -150px; }
+  .c2 { width: 400px; height: 400px; bottom: -100px; left: -80px; }
+  .c3 { width: 200px; height: 200px; top: 40%; left: 10%; }
+
+  /* ─── SECTION BASE ───────────────────────────── */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ochre), transparent);
+    margin: 0;
+    opacity: 0.3;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: rgba(200,112,42,0.08);
+    line-height: 1;
+    float: left;
+    margin-right: 1.5rem;
+    margin-top: -0.5rem;
+    font-style: italic;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    color: var(--ochre);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--earth);
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--earth);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #4A3828;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── TAGLINE BLOCK ──────────────────────────── */
+  .tagline-block {
+    background: var(--earth);
+    color: var(--cream);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tagline-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(200,112,42,0.15) 0%, transparent 70%);
+  }
+
+  .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .tagline span {
+    color: var(--gold);
+  }
+
+  .tagline-note {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(212,201,184,0.6);
+    position: relative;
+    z-index: 1;
+  }
+
+  .value-prop-box {
+    background: var(--linen);
+    border-left: 3px solid var(--ochre);
+    padding: 2rem 2.5rem;
+    margin: 2.5rem 0;
+    position: relative;
+  }
+
+  .value-prop-box p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--earth);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* ─── PILLARS ────────────────────────────────── */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0;
+    margin-top: 3rem;
+    border: 1px solid rgba(139,74,43,0.15);
+  }
+
+  .pillar {
+    padding: 2.5rem;
+    border-right: 1px solid rgba(139,74,43,0.15);
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .pillar:last-child { border-right: none; }
+
+  .pillar:hover { background: var(--linen); }
+
+  .pillar-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(200,112,42,0.12);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+  }
+
+  .pillar h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--ochre);
+  }
+
+  .pillar p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ─── COMPETITOR TABLE ───────────────────────── */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .comp-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+    border-bottom: 2px solid var(--ochre);
+    background: transparent;
+  }
+
+  .comp-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(139,74,43,0.1);
+    vertical-align: top;
+    line-height: 1.6;
+    font-size: 0.88rem;
+    color: #4A3828;
+  }
+
+  .comp-table tr:last-child td { border-bottom: none; }
+
+  .comp-table tr.highlight { background: var(--linen); }
+  .comp-table tr.highlight td { color: var(--earth); }
+
+  .badge {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    background: var(--ochre);
+    color: white;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+  }
+
+  /* ─── MESSAGING BLOCKS ───────────────────────── */
+  .msg-hero {
+    background: var(--earth);
+    color: var(--cream);
+    padding: 3rem 3.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .msg-hero::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 40px solid rgba(200,112,42,0.12);
+  }
+
+  .msg-hero .msg-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .msg-hero h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .msg-hero p {
+    color: var(--mist);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .msg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media(max-width: 680px) { .msg-grid { grid-template-columns: 1fr; } }
+
+  .msg-card {
+    background: var(--linen);
+    padding: 2rem 2.2rem;
+    border-top: 2px solid var(--ochre);
+  }
+
+  .msg-card .msg-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .msg-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--earth);
+    margin-bottom: 0.6rem;
+  }
+
+  .msg-card p {
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  /* ─── PALETTE ────────────────────────────────── */
+  .palette-row {
+    display: flex;
+    gap: 0;
+    margin: 2.5rem 0;
+    height: 120px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .swatch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    transition: flex 0.3s ease;
+    position: relative;
+  }
+
+  .swatch:hover { flex: 2; }
+
+  .swatch-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  .swatch-hex {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    font-family: monospace;
+  }
+
+  .palette-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .palette-note {
+    padding: 1.25rem 1.5rem;
+    background: var(--linen);
+    border-left: 3px solid;
+  }
+
+  .palette-note h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    color: var(--earth);
+  }
+
+  .palette-note p {
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ─── TYPOGRAPHY SPEC ───────────────────────── */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .type-card {
+    padding: 2rem;
+    background: var(--linen);
+  }
+
+  .type-card .role {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── IMAGERY GUIDE ──────────────────────────── */
+  .imagery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .imagery-card {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .imagery-visual {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .imagery-body {
+    padding: 1.25rem 1.5rem;
+    background: var(--linen);
+    border-bottom: 3px solid;
+  }
+
+  .imagery-body h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    color: var(--earth);
+    margin-bottom: 0.35rem;
+  }
+
+  .imagery-body p {
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ─── PULLQUOTE ──────────────────────────────── */
+  .pullquote {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--linen);
+    position: relative;
+  }
+
+  .pullquote::before {
+    content: '❝';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    color: rgba(200,112,42,0.15);
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--earth);
+    max-width: 750px;
+    margin: 0 auto 1rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+  }
+
+  .pullquote cite {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    font-style: normal;
+  }
+
+  /* ─── FOOTER ─────────────────────────────────── */
+  .doc-footer {
+    background: var(--ink);
+    color: var(--mist);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .doc-footer .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-footer p {
+    font-size: 0.75rem;
+    color: rgba(212,201,184,0.4);
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  /* ─── UTILITIES ──────────────────────────────── */
+  .clearfix::after { content: ''; display: block; clear: both; }
+
+  strong { font-weight: 600; color: var(--earth); }
+  
+  ul { padding-left: 1.2rem; margin-bottom: 1rem; }
+  li { font-size: 0.9rem; line-height: 1.85; color: #4A3828; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media(max-width: 680px) { .two-col { grid-template-columns: 1fr; gap: 2rem; } }
+
+  @media(max-width: 680px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    .pillar { border-right: none; border-bottom: 1px solid rgba(139,74,43,0.15); }
+    .cover h1 { font-size: 2.4rem; }
+    .palette-row { height: 80px; }
+    .msg-hero { padding: 2rem; }
+    .comp-table { font-size: 0.78rem; }
+    .comp-table th, .comp-table td { padding: 0.6rem 0.75rem; }
+  }
+
+  .animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ COVER ═══ -->
+<section class="cover">
+  <div class="cover-texture"></div>
+  <div class="cover-circle c1"></div>
+  <div class="cover-circle c2"></div>
+  <div class="cover-circle c3"></div>
+
+  <div class="agency-name">Tswelopele Travel · tswelopeletravel.com</div>
+  <div class="cover-ornament"></div>
+  <h1>Brand Strategy &<br><em>Positioning Strategy</em></h1>
+  <p class="cover-subtitle"><em>Tswelopele</em> — Sesotho/Setswana for "Progress · Moving Forward" — A complete brand identity and marketing framework for tswelopeletravel.com</p>
+  <div class="cover-ornament"></div>
+  <div class="cover-meta">Pretoria · Limpopo · South Africa &nbsp;|&nbsp; 2026 Strategy Document</div>
+</section>
+
+<!-- ═══ SECTION 1: TAGLINE & VALUE PROP ═══ -->
+<section class="tagline-block">
+  <p class="tagline">"Every journey <span>has a story</span>.<br>Let us write yours."</p>
+  <p class="tagline-note">Primary Tagline · Tswelopele Travel</p>
+</section>
+
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">01</span>
+    <span class="section-label">Tagline & Value Proposition</span>
+    <h2>The Words That Define Tswelopele</h2>
+  </div>
+
+  <div class="two-col" style="margin-top:2.5rem;">
+    <div>
+      <h3>Primary Tagline</h3>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-style:italic; color:var(--ochre);">
+        "Every journey has a story. Let us write yours."
+      </p>
+      <p>Warm, personal, and action-oriented. Works across all markets — SA families, corporate clients, and international visitors alike feel invited in. Anchored by the brand name's meaning: every journey with Tswelopele is a step forward.</p>
+
+      <h3 style="margin-top:1.5rem;">Name-Forward Tagline (Brand Philosophy)</h3>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-style:italic; color:var(--ochre);">
+        "Tswelopele — Move Forward, Together."
+      </p>
+      <p>Uses the brand name directly. "Tswelopele" (tsweh-loh-PEH-leh) in Sesotho/Setswana means <em>progress</em> or <em>moving forward</em> — a perfect metaphor for transformative travel, personal growth, community upliftment, and post-apartheid South Africa's own journey. This tagline doubles as cultural education for international visitors.</p>
+
+      <h3 style="margin-top:1.5rem;">Secondary Tagline (International Markets)</h3>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-style:italic; color:var(--ochre);">
+        "South Africa, as only its people can show you."
+      </p>
+      <p>Positions Tswelopele's local roots and cultural authenticity as the ultimate differentiator for UK, EU and US travellers tired of packaged, sterilised safari tours.</p>
+
+      <h3 style="margin-top:1.5rem;">Ubuntu Line (Brand Philosophy)</h3>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-style:italic; color:var(--ochre);">
+        "Umuntu ngumuntu ngabantu — I am because we are."
+      </p>
+      <p>Not for advertising copy, but for the brand's internal compass and about-page storytelling. Paired with "Tswelopele," the two words together tell Tswelopele Travel's whole story: progress made together, as a community.</p>
+    </div>
+
+    <div>
+      <div class="value-prop-box">
+        <p><strong>Value Proposition:</strong> Tswelopele Travel crafts hyper-personalised, story-led journeys through South Africa's soul — connecting travellers to living heritage, hidden landscapes, community kitchens, and conservation frontlines, guided by people who were born into these stories. <em>Tswelopele</em> means "progress" in Sesotho — and that is what every journey delivers: a step forward for the traveller, and for the communities they move through.</p>
+      </div>
+
+      <p><strong>What this means in practice:</strong></p>
+      <ul>
+        <li>No two Tswelopele itineraries are identical — each is built around the guest's story, curiosity, and why they travel</li>
+        <li>Every tour includes a moment of community connection: a meal cooked by a local family, a conversation with a ranger, a music session in a township</li>
+        <li>Kgobedi's Pretoria/Limpopo roots give Tswelopele insider access that no foreign operator can replicate</li>
+        <li>Conservation and community benefit are baked into every booking, not bolted on as a "responsible tourism" label</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══ SECTION 2: BRAND PILLARS ═══ -->
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">02</span>
+    <span class="section-label">Brand Pillars</span>
+    <h2>Five Pillars That Hold Tswelopele's Story</h2>
+  </div>
+
+  <div class="pillars-grid">
+    <div class="pillar">
+      <span class="pillar-num">I</span>
+      <span class="pillar-icon">📖</span>
+      <h3>Story First</h3>
+      <p>Every itinerary begins with a narrative arc — not a list of stops. Guests are co-authors of their journey. From Mandela's Robben Island walk to a Limpopo elder's oral history session, each experience is framed as a chapter in a larger human story.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">II</span>
+      <span class="pillar-icon">🌍</span>
+      <h3>Ubuntu at the Core</h3>
+      <p>Travel that strengthens communities. Tswelopele routes income directly to local guides, township restaurants, women's cooperatives, and conservation trusts. The traveller's presence should leave people better off — not just photographed.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">III</span>
+      <span class="pillar-icon">🦁</span>
+      <h3>Wild & Considered</h3>
+      <p>Adventure without recklessness. Conservation without condescension. Tswelopele curates wildlife and wilderness experiences anchored in ecology education, anti-poaching awareness, and the quiet wonder of a sunrise in the bush — unhurried and real.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">IV</span>
+      <span class="pillar-icon">✨</span>
+      <h3>Hyper-Personal</h3>
+      <p>Boutique means bespoke. No group-tour cattle herds. Kgobedi and team design every journey in direct conversation with the client — uncovering their motivation, their gaps, their hopes — and building an experience that meets them there.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">V</span>
+      <span class="pillar-icon">🎵</span>
+      <h3>Culture in Motion</h3>
+      <p>Food. Music. Language. Art. Ritual. South African culture is not a museum exhibit — it breathes, sings, and feeds you. Tswelopele puts travellers inside living culture: Soweto jazz clubs, Venda pottery villages, Cape Malay spice markets, Zulu beading workshops.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══ SECTION 3: COMPETITOR DIFFERENTIATION ═══ -->
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">03</span>
+    <span class="section-label">Competitive Positioning</span>
+    <h2>Why Tswelopele Owns the Uncontested Space</h2>
+  </div>
+
+  <p>South Africa's travel market is crowded at both ends — mass safari operators and ultra-luxury lodges. But the middle ground of <em>culturally intelligent, story-driven, community-embedded boutique travel</em> is largely unclaimed. Here is where Tswelopele lives.</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Operator Type</th>
+        <th>Their Promise</th>
+        <th>Their Gap</th>
+        <th>Tswelopele's Counter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Large SA Safari Groups</strong><br><span style="font-size:0.78rem;color:#888;">(Thompsons, Club Med)</span></td>
+        <td>Big game, smooth logistics, international standards</td>
+        <td>Cookie-cutter itineraries; transactional, culturally shallow; community invisible</td>
+        <td>Story-led, community-rooted; the game drive comes with a ranger who grew up in that bush</td>
+      </tr>
+      <tr>
+        <td><strong>Luxury Lodge Brands</strong><br><span style="font-size:0.78rem;color:#888;">(Singita, &Beyond)</span></td>
+        <td>World-class comfort, exclusivity, premium wildlife</td>
+        <td>Out of reach price-wise; culturally distant from real SA life; curated bubble</td>
+        <td>Premium feel without the buffer zone — guests sleep in the story, not a resort beside it</td>
+      </tr>
+      <tr>
+        <td><strong>Online Booking Platforms</strong><br><span style="font-size:0.78rem;color:#888;">(Airbnb Experiences, Viator)</span></td>
+        <td>Variety, convenience, price transparency</td>
+        <td>Impersonal; no narrative thread; fragmented; zero continuity or curation</td>
+        <td>One trusted human relationship from first enquiry to post-trip follow-up; Kgobedi's personal touch</td>
+      </tr>
+      <tr>
+        <td><strong>International Tour Operators</strong><br><span style="font-size:0.78rem;color:#888;">(UK/EU operators selling SA)</span></td>
+        <td>Familiar brand, comfort for foreign travellers</td>
+        <td>No genuine local insight; commissions leak money out of SA; cultural surface-skimming</td>
+        <td>Indigenous knowledge, Limpopo-born perspective, money stays in South African communities</td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>Tswelopele Travel</strong> <span class="badge">You</span></td>
+        <td>Story-led, hyper-personal, Ubuntu-rooted, culturally immersive SA journeys</td>
+        <td>—</td>
+        <td><strong>The unowned space: where storytelling, culture, conservation, and genuine human connection meet in one boutique experience</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="value-prop-box" style="margin-top:2.5rem;">
+    <p><strong>The Blue Ocean Statement:</strong> No operator currently owns "story-led, community-embedded, hyper-personalised South African travel guided by someone born into the culture." That is Tswelopele's white space — and it is exactly what post-pandemic travellers, particularly those 35–60 in the UK, EU, US, and SA's emerging middle class, are actively searching for.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══ SECTION 4: KEY MESSAGING ═══ -->
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">04</span>
+    <span class="section-label">Key Messaging</span>
+    <h2>Words for Homepage & Services</h2>
+  </div>
+
+  <div class="msg-hero">
+    <span class="msg-label">Homepage Hero — Above the Fold</span>
+    <h3>"South Africa has a thousand stories.<br>Which one is calling you?"</h3>
+    <p>Subheading: Tswelopele Travel crafts personalised, story-led journeys through living South African heritage — from the Limpopo bush at dawn to Soweto's heartbeat at night. Guided by people who carry these stories in their bones.</p>
+  </div>
+
+  <div class="msg-grid">
+    <div class="msg-card">
+      <span class="msg-label">About Us — Opening Line</span>
+      <h3>Born here. Rooted here. Sharing this.</h3>
+      <p>Tswelopele Travel grew from Kgobedi Maloa's belief that the best guide isn't the one with the most knowledge — it's the one for whom this land is home. Based in Pretoria and rooted in Limpopo, we build journeys from the inside out.</p>
+    </div>
+
+    <div class="msg-card">
+      <span class="msg-label">Heritage Journeys Service</span>
+      <h3>Walk inside history, not beside it.</h3>
+      <p>From Mandela's 27 years on Robben Island to the Anglo-Boer War battlefields of Limpopo, our heritage tours don't recite facts — they invite you into the emotional truth of South Africa's extraordinary human story.</p>
+    </div>
+
+    <div class="msg-card">
+      <span class="msg-label">Wildlife & Conservation</span>
+      <h3>Where the wild things are — and why they must stay.</h3>
+      <p>Our conservation experiences connect you to anti-poaching rangers, wildlife vets, and community stewards working daily to protect South Africa's natural inheritance. You won't just see elephants. You'll understand why they matter.</p>
+    </div>
+
+    <div class="msg-card">
+      <span class="msg-label">Corporate & Team Travel</span>
+      <h3>Your team's best strategy session has no Wi-Fi.</h3>
+      <p>Tswelopele designs immersive corporate retreats and leadership journeys that use South Africa's landscape and culture as a classroom. Ubuntu leadership principles. Problem-solving under a Drakensberg sky. Teambuilding that lasts years, not months.</p>
+    </div>
+
+    <div class="msg-card">
+      <span class="msg-label">Family Journeys</span>
+      <h3>Stories your children will tell their children.</h3>
+      <p>We design multigenerational family tours that balance wonder, safety, and genuine education. Children leave understanding what Ubuntu means. Parents leave with photos that can't be Googled. Everyone leaves changed.</p>
+    </div>
+
+    <div class="msg-card">
+      <span class="msg-label">International Visitors</span>
+      <h3>Come as a visitor. Leave as a witness.</h3>
+      <p>South Africa is not a destination to be checked off. It is a country in the middle of its own story — still healing, still building, still singing. Tswelopele takes you to the people and places at the heart of that story. You bring it home.</p>
+    </div>
+  </div>
+
+  <div class="value-prop-box" style="margin-top:2.5rem;">
+    <p><strong>Call to Action across all channels:</strong> "Begin your story" &nbsp;→&nbsp; (replaces generic "Book Now" / "Contact Us" — narrative-consistent and emotionally resonant)</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══ SECTION 5: VISUAL IDENTITY ═══ -->
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">05</span>
+    <span class="section-label">Visual Identity</span>
+    <h2>Colour, Type & Imagery Direction</h2>
+  </div>
+
+  <h3 style="margin-bottom:1.5rem; margin-top:2.5rem;">The Palette — Earth &amp; Ember</h3>
+  <p>Grounded in the ochres of Limpopo soil, the deep greens of riverine bush, the gold of late-afternoon bushveld light, and the warm neutrals of handwoven fabric. Intentionally South African — not generic "safari beige."</p>
+
+  <div class="palette-row" style="margin-top:2rem;">
+    <div class="swatch" style="background:#2C1A0E;">
+      <span class="swatch-name" style="color:#D4C9B8;">Limpopo<br>Earth</span>
+      <span class="swatch-hex" style="color:#D4C9B8;">#2C1A0E</span>
+    </div>
+    <div class="swatch" style="background:#C8702A;">
+      <span class="swatch-name" style="color:#fff;">Bushveld<br>Ochre</span>
+      <span class="swatch-hex" style="color:rgba(255,255,255,0.7);">#C8702A</span>
+    </div>
+    <div class="swatch" style="background:#E8B84B;">
+      <span class="swatch-name" style="color:#2C1A0E;">Sunset<br>Gold</span>
+      <span class="swatch-hex" style="color:rgba(44,26,14,0.7);">#E8B84B</span>
+    </div>
+    <div class="swatch" style="background:#4A6741;">
+      <span class="swatch-name" style="color:#F5F0E8;">Riverine<br>Sage</span>
+      <span class="swatch-hex" style="color:rgba(245,240,232,0.7);">#4A6741</span>
+    </div>
+    <div class="swatch" style="background:#D4C9B8;">
+      <span class="swatch-name" style="color:#2C1A0E;">Bone<br>Mist</span>
+      <span class="swatch-hex" style="color:rgba(44,26,14,0.7);">#D4C9B8</span>
+    </div>
+    <div class="swatch" style="background:#F5F0E8;">
+      <span class="swatch-name" style="color:#2C1A0E;">Linen<br>Cream</span>
+      <span class="swatch-hex" style="color:rgba(44,26,14,0.6);">#F5F0E8</span>
+    </div>
+    <div class="swatch" style="background:#6B8FAB;">
+      <span class="swatch-name" style="color:#fff;">Highveld<br>Sky</span>
+      <span class="swatch-hex" style="color:rgba(255,255,255,0.7);">#6B8FAB</span>
+    </div>
+  </div>
+
+  <div class="palette-notes">
+    <div class="palette-note" style="border-color:var(--earth);">
+      <h4>Primary</h4>
+      <p>Limpopo Earth + Bushveld Ochre. The dominant brand personality — warm, confident, grounded. Used in headers, nav, and key CTAs.</p>
+    </div>
+    <div class="palette-note" style="border-color:var(--gold);">
+      <h4>Accent</h4>
+      <p>Sunset Gold. Sparingly used for emphasis, ornamental elements, and icons. Never overused — gold only means something when it's rare.</p>
+    </div>
+    <div class="palette-note" style="border-color:var(--sage);">
+      <h4>Secondary</h4>
+      <p>Riverine Sage. For conservation-themed pages, eco-credentials, and nature copy. Signals responsibility without being preachy green.</p>
+    </div>
+    <div class="palette-note" style="border-color:var(--sky);">
+      <h4>Tertiary</h4>
+      <p>Highveld Sky. For international market materials, corporate services, and fresh counterpoint to the warm earth tones.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:3rem 0 0.5rem;">Typography</h3>
+  <div class="type-grid">
+    <div class="type-card">
+      <span class="role">Display / Headlines</span>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-style:italic; color:var(--earth); margin:0 0 0.5rem; line-height:1.2;">Cormorant Garamond</p>
+      <p style="font-size:0.82rem; margin:0;">Elegant, editorial, warm. Feels like a leather-bound travel journal. Use for all major headings, taglines, and pullquotes. Italic variant evokes handwriting and storytelling intimacy.</p>
+    </div>
+    <div class="type-card">
+      <span class="role">Body / Interface</span>
+      <p style="font-family:'Barlow',sans-serif; font-size:1.1rem; font-weight:300; color:var(--earth); margin:0 0 0.5rem;">Barlow Light / Regular</p>
+      <p style="font-size:0.82rem; margin:0;">Clean, modern, and approachable. Reads effortlessly at body size across all devices. Light weight gives it an airy quality that pairs well with Cormorant's density.</p>
+    </div>
+    <div class="type-card">
+      <span class="role">Labels / UI / Accents</span>
+      <p style="font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:var(--ochre); margin:0 0 0.5rem;">BARLOW CONDENSED</p>
+      <p style="font-size:0.82rem; margin:0;">Used in all-caps for navigation, section labels, badges, and button text. Gives structure without heaviness. Very legible at small sizes.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:3rem 0 0.5rem;">Imagery Direction</h3>
+  <div class="imagery-grid">
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#2C1A0E,#C8702A);">🌅</div>
+      <div class="imagery-body" style="border-color:var(--ochre);">
+        <h4>Golden Hour, Always</h4>
+        <p>Shoot at dawn or dusk. Warm, directional light. Long shadows. No overexposed midday white. South Africa's light is the world's most cinematic — use it.</p>
+      </div>
+    </div>
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#1A2C1A,#4A6741);">👐</div>
+      <div class="imagery-body" style="border-color:var(--sage);">
+        <h4>Hands & Faces</h4>
+        <p>Close-ups of human hands: shaping pottery, pointing to a spoor, cooking pap, strumming a guitar. Faces that are laughing, focused, present. Not posed. Never stock.</p>
+      </div>
+    </div>
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#0E1A2C,#6B8FAB);">🦒</div>
+      <div class="imagery-body" style="border-color:var(--sky);">
+        <h4>Wildlife With Context</h4>
+        <p>Animals framed with landscape depth. Show scale, habitat, behaviour — not just close-up trophy shots. A giraffe against a purple-orange sky means more than a zoom on its eye.</p>
+      </div>
+    </div>
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#2C1A0E,#8B4A2B);">🏘️</div>
+      <div class="imagery-body" style="border-color:var(--clay);">
+        <h4>Township & Village Life</h4>
+        <p>Vibrant, dignified, alive — never poverty-voyeuristic. Murals, markets, music, children running. The aesthetic of South African townships is extraordinarily rich; photograph it that way.</p>
+      </div>
+    </div>
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#1A1208,#2C1A0E);">📜</div>
+      <div class="imagery-body" style="border-color:var(--gold);">
+        <h4>Heritage & Texture</h4>
+        <p>Worn leather, handwritten notes, old maps, beaded jewellery, kente-adjacent fabric, baobab bark. Physical textures that speak of memory and time. Use as website backgrounds and design overlays.</p>
+      </div>
+    </div>
+    <div class="imagery-card">
+      <div class="imagery-visual" style="background:linear-gradient(135deg,#2C2010,#E8B84B30);">🌾</div>
+      <div class="imagery-body" style="border-color:var(--earth);">
+        <h4>Landscape as Character</h4>
+        <p>The Limpopo bushveld, Drakensberg escarpment, the Cape's fynbos, Kruger's open plains — each biome as a named character in the story. Panoramic with human figures for scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="value-prop-box" style="margin-top:2.5rem;">
+    <p><strong>Photography philosophy:</strong> Every image should feel like it was taken by a friend who knows this place intimately — not a tourist with a drone or a stock photographer on a budget. If it could be used for any African country, it shouldn't be on Tswelopele's site. Be specifically, unmistakably South African.</p>
+  </div>
+
+</section>
+
+<!-- ═══ PULLQUOTE ═══ -->
+<div class="pullquote">
+  <blockquote>"We are not a travel agency that sells South Africa. We are South Africans who invite the world to sit at our table, walk in our footsteps, and carry a piece of our story home."</blockquote>
+  <cite>— Founder, Tswelopele Travel · tswelopeletravel.com</cite>
+</div>
+
+<!-- ═══ SECTION 6: SA-LOCAL FEEL ═══ -->
+<section class="section">
+  <div class="clearfix">
+    <span class="section-number">06</span>
+    <span class="section-label">South African Soul</span>
+    <h2>Making Every Touchpoint Unmistakably South African</h2>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Language & Tone</h3>
+      <ul>
+        <li><strong>Teach your name first:</strong> Every homepage, About page, and email signature should include the pronunciation — <em>Tswelopele (tsweh-loh-PEH-leh)</em> — and its Sesotho meaning: "progress, moving forward." International visitors who learn to say it feel immediately more connected to the brand</li>
+        <li>Pepper copy lightly with isiZulu, Sesotho, Tshivenda, Setswana phrases — never tokenistically, always explained, always meaningful</li>
+        <li>Use "braai" not "barbecue." "Veld" not "savanna." "Bakkie" not "pickup." The language is the culture.</li>
+        <li>Warmth and directness over corporate polish. South Africans greet with "<em>Howzit</em>" — Tswelopele's copy should feel the same: genuine and without pretence</li>
+        <li>"Tswelopele" and "Ubuntu" must be used meaningfully, not as marketing buzzwords — explain them through stories, not slogans</li>
+        <li>Avoid colonial nostalgia tropes: no "unspoiled wilderness," no "discover Africa" — use language that centres the living people of this place</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem;">Music & Sound (Digital Experience)</h3>
+      <ul>
+        <li>Website ambient option: soft SA jazz (think Miriam Makeba, Hugh Masekela's heirs), never generic world music</li>
+        <li>Video content should use licensed South African artists — amapiano is the sound of contemporary SA and speaks to younger audiences globally</li>
+        <li>Audio testimonials from community partners add authenticity money can't buy</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Physical Touchpoints</h3>
+      <ul>
+        <li><strong>Brochure / Welcome Pack:</strong> Printed on kraft paper with hand-illustrated route maps in the style of old cartography. Each client receives a bespoke illustrated postcard of their key destination — this becomes a keepsake, not a flyer</li>
+        <li><strong>Digital Journey Book:</strong> After booking, each client receives a beautifully designed digital "Story Guide" — narrative context, cultural primers, playlist, food guide — for their specific journey</li>
+        <li><strong>Post-Trip Story Package:</strong> A curated photo edit and written narrative of their journey — "Your Chapter" — delivered 2 weeks after return. Shareable, emotional, brand-extending</li>
+        <li><strong>Community Partner Spotlight:</strong> Each itinerary names the local businesses, guides, and cooperatives involved — clients feel accountable to real people, not a brand</li>
+      </ul>
+
+      <h3 style="margin-top:1.5rem;">Social Media Voice</h3>
+      <ul>
+        <li>Instagram: micro-stories (150 words + one striking image). Not just "look at this sunset" — tell us whose land this is, what the tree is called in Sepedi, why the birds behave that way at dusk</li>
+        <li>LinkedIn (Corporate market): Thought leadership on Ubuntu-inspired leadership, transformation travel, and community-centred business tourism</li>
+        <li>WhatsApp: Primary channel for SA domestic market — personal, voice-note-friendly, responsive. Kgobedi's voice is the brand voice here</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="doc-footer">
+  <div class="footer-logo">Tswelopele Travel</div>
+  <p style="margin-bottom:0.5rem; color:var(--mist); font-size:0.8rem; letter-spacing:0.05em;">Storyweaver of South African Journeys</p>
+  <p>tswelopeletravel.com &nbsp;·&nbsp; Pretoria & Limpopo, South Africa &nbsp;·&nbsp; Brand Strategy 2026</p>
+</footer>
+
+<script>
+  // Animate sections on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.section, .pullquote, .tagline-block').forEach(el => {
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    observer.observe(el);
+  });
+
+  // Cover always visible
+  document.querySelector('.cover').style.opacity = '1';
+  document.querySelector('.cover').style.transform = 'none';
+</script>
+</body>
+</html>
